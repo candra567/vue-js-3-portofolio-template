@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<main>
+  <NavbarCompoVue/>
+  <SidebarCompoVue/>
+  <content-page-vue>
+  <router-view name="home"></router-view>
+  </content-page-vue>
+</main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NavbarCompoVue from '@/components/desktop/NavbarCompo.vue';
+import SidebarCompoVue from '@/components/desktop/SidebarCompo.vue';
+import ContentPageVue from './page/ContentPage.vue';
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+     NavbarCompoVue,
+    SidebarCompoVue,
+    ContentPageVue
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
